@@ -46,6 +46,7 @@ data <- vol %>% dplyr::select(StandID, Year, Tpa, BA, MCuFt) %>%
   # filter(year < 2118) %>%
   ungroup()
 
+rm(carbon, area, vol)
 
 # Add cords & carbon conversion
 # 1 cord = 128 cuft; unclear if FVS is green or dry
