@@ -42,7 +42,8 @@ spnhf$mt_C_merch_per_acre = spnhf$mt_C_merch/spnhf$area_acres
 
 # SPNHF's lands, there's 3,155,267 mt carbon currently stored in merchantable live wood.
 sum(spnhf$mt_C_merch)
-# IF we assume all live aboveground is approx 1/3, that's 9,465,802 in all pools.
-# And that's an underestimate b/c only merch is in above number. Probably 10,000,000. 
-sum(spnhf$mt_C_merch) * 3
-
+# If we assume merchantable volume is approx 1/4, that's 12,621,069 in all pools.
+# Live aboveground is usually 1/3, but this merchantable volume doesn't include branches, etc. Hence 1/4. 
+sum(spnhf$mt_C_merch) * 4
+sum(spnhf$area_acres) # 180366 acres
+sum(spnhf$mt_C_merch)*4/sum(spnhf$area_acres) # 70 tons/acre 
